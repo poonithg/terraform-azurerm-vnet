@@ -77,4 +77,72 @@ variable "location" {
   description = "The location to place the resources."
   type        = string
 }
+
+
+##### VNET VARIABLES #####
+##########################
+variable "vnet-demo" {
+  description = "Details about the virtual network"
+  type        = map(string)
+}
+
+##### PRIVATE SUBNET VARIABLES #####
+####################################
+variable "priv-subs" {
+  description = "Details about the private subnet"
+  type = map(object({
+    name             = string
+    address_prefixes = string
+  }))
+}
+
+##### PUBLIC SUBNET VARIABLES #####
+###################################
+variable "pub-subs" {
+  description = "Details about the private subnet"
+  type = map(object({
+    name             = string
+    address_prefixes = string
+  }))
+}
+```
+
+## Example of tfvars file
+
+```
+###########################################################
+##### VNET VARIABLES #####
+###########################################################
+vnet-demo = {
+  name          = "vnet-demo-01"
+  address_space = "10.0.0.0/8"
+}
+
+##### PRIVATE SUBNET VARIABLES #####
+priv-subs = {
+  "demo-sub-priv-01" = {
+    name             = "demo-sub-priv-01"
+    address_prefixes = "10.1.0.0/16"
+  },
+  "demo-sub-priv-02" = {
+    name             = "demo-sub-priv-02"
+    address_prefixes = "10.2.0.0/16"
+  }
+}
+
+##### PUBLIC SUBNET VARIABLES #####
+pub-subs = {
+  "demo-sub-pub-01" = {
+    name             = "demo-sub-pub-01"
+    address_prefixes = "10.10.0.0/16"
+  },
+  "AzureBastionSubnet" = {
+    name             = "AzureBastionSubnet"
+    address_prefixes = "10.20.0.0/16"
+  },
+  "DEMO-APP-GW-SUBNET" = {
+    name             = "DEMO-APP-GW-SUBNET"
+    address_prefixes = "10.100.0.0/16"
+  }
+}
 ```
