@@ -1,7 +1,7 @@
 # Azure Virtual Network Terraform Module
 
 ### Overview
-This terraform module provisions a fully functional Azure Virtual Network (VNet) with a list of private and public subnets, including the network gateway for the private subnets. <br\>
+This terraform module provisions a fully functional Azure Virtual Network (VNet) with a list of private and public subnets, including the network gateway for the private subnets. <br />
 This module is designed to simplify the creation of virtual networks within Azure, allowing users to configure a scalable, secure and easily maintainable networking environment for their cloud resources.
 
 I![azurerm_vnet](https://github.com/user-attachments/assets/2acc1222-0b2b-4fa5-b48e-6a30ba05d69d)
@@ -53,7 +53,7 @@ No modules.
 | <a name="output_vnet-id"></a> [vnet-id](#output\_vnet-id) | n/a |
 
 ## Variables needed
-`
+```
 ###### TAGS VARIABLES #####
 ###########################
 variable "client" {
@@ -77,4 +77,4 @@ variable "location" {
   description = "The location to place the resources."
   type        = string
 }
-`
+```
