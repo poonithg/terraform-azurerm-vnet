@@ -110,6 +110,14 @@ variable "pub-subs" {
 ## Example of tfvars file
 
 ```
+##### TAGS VARIABLES #####
+env    = "DEMO"
+client = "GIRISH"
+
+##### RG VARIABLE #####
+rg-demo  = "xxxxxxxxxxxx"
+location = "westus"
+
 ###########################################################
 ##### VNET VARIABLES #####
 ###########################################################
