@@ -2,3 +2,4 @@
 !/main.tf
 !/outputs.tf
 !/variables.tf
+!/.github/workflows/checkov-workflow.yml
