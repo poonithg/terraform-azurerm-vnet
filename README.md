@@ -6,7 +6,6 @@ This module is designed to simplify the creation of virtual networks within Azur
 
 I![azurerm_vnet](https://github.com/user-attachments/assets/2acc1222-0b2b-4fa5-b48e-6a30ba05d69d)
 
-<br\>
 
 ## Requirements
 - Terraform version 1.8.x
@@ -52,3 +51,30 @@ No modules.
 | <a name="output_private-subnet-ids"></a> [private-subnet-ids](#output\_private-subnet-ids) | n/a |
 | <a name="output_public-subnet-ids"></a> [public-subnet-ids](#output\_public-subnet-ids) | n/a |
 | <a name="output_vnet-id"></a> [vnet-id](#output\_vnet-id) | n/a |
+
+## Variables needed
+`
+###### TAGS VARIABLES #####
+###########################
+variable "client" {
+  description = "The client name to be used in resource names"
+  type        = string
+}
+
+variable "env" {
+  description = "The environment for the resources."
+  type        = string
+}
+
+##### RG VARIABLE #####
+#######################
+variable "rg-demo" {
+  description = "Resource Group Name"
+  type        = string
+}
+
+variable "location" {
+  description = "The location to place the resources."
+  type        = string
+}
+`
